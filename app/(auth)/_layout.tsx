@@ -25,7 +25,7 @@ export default function _Layout() {
       >
         <View
           className="w-full relative"
-          style={{ height: Dimensions.get("screen").height  }}
+          style={{ height: Dimensions.get("screen").height /2.5 }}
         >
           <ImageBackground
             source={images.loginGraphic}
@@ -37,18 +37,10 @@ export default function _Layout() {
             className="self-center size-48 absolute -bottom-16 z-10"
           />
         </View>
-        <CustomInput
-          placeholder="Enter your email"
-          value={""}
-          onChangeText={() => {}}
-          label="Email"
-          keyboardType="email-address"
-        
-        />
-        <CustomButton />
+       
         {/* Add more components as needed */}
-      </ScrollView>
       <Slot />
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 }
